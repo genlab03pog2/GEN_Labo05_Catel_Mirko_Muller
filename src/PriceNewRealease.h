@@ -8,13 +8,13 @@
 
 class PriceNewRelease : public Price {
 public:
-  // explicit PriceNewRelease();
+
   double getAmount(int _daysRented) const;
   std::string getPriceType() const;
   int getFrequentRenterPoints(int _daysRented) const;
 };
 
-//PriceNewRelease::PriceNewRelease() =default;
+
 
 inline double PriceNewRelease::getAmount(int _daysRented) const {
   return _daysRented * 3;

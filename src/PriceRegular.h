@@ -6,14 +6,12 @@
 
 class PriceRegular : public Price {
 public:
-    //explicit PriceRegular();
     double getAmount(int _daysRented) const;
   std::string getPriceType() const ;
   int getFrequentRenterPoints(int _daysRented) const;
 
 };
 
-//PriceRegular::PriceRegular() = default;
 
 inline double PriceRegular::getAmount(int _daysRented) const {
   double thisAmount = 2;

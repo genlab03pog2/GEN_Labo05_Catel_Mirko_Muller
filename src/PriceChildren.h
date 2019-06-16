@@ -5,14 +5,13 @@
 
 class PriceChildren : public Price {
 public:
-    //explicit PriceChildren();
+
     double getAmount(int _daysRented) const;
     std::string getPriceType() const;
     int getFrequentRenterPoints(int _daysRented) const;
 
 };
 
-//PriceChildren::PriceChildren() = default;
 
 inline double PriceChildren::getAmount(int _daysRented) const {
   double thisAmount = 1.5;
