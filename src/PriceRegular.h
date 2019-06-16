@@ -5,7 +5,7 @@
 #include "Price.h"
 
 class PriceRegular : public Price {
-protected:
+private:
   const double PRICE_PER_DAY = 1.5;
   const double DAYS_STEP = 2;
   const double MIN_AMOUNT = 2;

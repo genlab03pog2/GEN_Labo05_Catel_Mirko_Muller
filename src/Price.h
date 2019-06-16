@@ -10,7 +10,6 @@
 
 class Price {
 public:
-
   virtual double getAmount(int _daysRented) const = 0;
 
   virtual std::string getPriceType() const = 0;

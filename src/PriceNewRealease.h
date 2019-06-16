@@ -7,7 +7,7 @@
 #include "Price.h"
 
 class PriceNewRelease : public Price {
-protected:
+private:
   const double PRICE_PER_DAY = 3;
 public:
 
