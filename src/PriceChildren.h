@@ -14,6 +14,7 @@ public:
     int getFrequentRenterPoints(int _daysRented) const;
 };
 
+
 inline double PriceChildren::getAmount(int _daysRented) const {
   double thisAmount = MIN_AMOUNT;
   if (_daysRented > DAYS_STEP )

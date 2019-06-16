@@ -21,9 +21,8 @@ inline int Rental::getDaysRented() const { return _daysRented; }
 inline const Movie& Rental::getMovie() const { return _movie; }
 
 inline std::ostream & operator<<(std::ostream & toStr, Rental const & rental) {
-
     toStr << "\t" << rental.getMovie().getTitle() << "\t"
-        << rental.getMovie().getAmount(rental.getDaysRented()) << "\n";
+        << rental.getMovie().getPrice()->getAmount(rental.getDaysRented()) << "\n";
     return toStr;
 }
 

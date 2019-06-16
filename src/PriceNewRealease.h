@@ -10,6 +10,7 @@ class PriceNewRelease : public Price {
 protected:
   const double PRICE_PER_DAY = 3;
 public:
+
   double getAmount(int _daysRented) const;
   std::string getPriceType() const;
   int getFrequentRenterPoints(int _daysRented) const;
