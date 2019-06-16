@@ -10,6 +10,7 @@ class Movie {
 public:
   Movie(const std::string& title, std::shared_ptr<Price> price);
   std::string getTitle() const;
+  void setPriceType(std::shared_ptr<Price> price);
   std::shared_ptr<Price> getPrice() const;
 
 private:
@@ -20,6 +21,8 @@ private:
 inline Movie::Movie(const std::string& title, std::shared_ptr<Price> price) : _title( title ), price( price ){}
 
 inline std::string Movie::getTitle() const { return _title; }
+
+inline void Movie::setPriceType(std::shared_ptr<Price> price) {this->price = price; }
 
 inline std::shared_ptr<Price> Movie::getPrice() const { return price;}
 
