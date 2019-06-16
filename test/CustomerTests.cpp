@@ -34,4 +34,14 @@ TEST(customer_test, testStatementSimpleAddOnOneCustomer)
     EXPECT_EQ(customer.statement(),expected);
 }
 
+TEST(customer_test, testStatementSimpleAddOnOneCustomerMaxInt)
+{
+    Customer customer("Customer");
+    customer.addRental( Rental ( Movie( "film1",std::shared_ptr<Price>(new PriceRegular())),INT_MAX));
+
+    std::string expected = "Rental Record for Customer\n\tfilm1\t3.22123e+09\nAmount owed is 3.22123e+09\nYou earned 1 frequent renter points";
+    EXPECT_EQ(customer.statement(),expected);
+}
+
+
 
