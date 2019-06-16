@@ -7,7 +7,8 @@ class PriceChildren : public Price {
 public:
     //explicit PriceChildren();
     double getAmount(int _daysRented) const;
-  std::string getPriceType() const ;
+    std::string getPriceType() const;
+    int getFrequentRenterPoints(int _daysRented) const;
 
 };
 
@@ -23,5 +24,10 @@ inline double PriceChildren::getAmount(int _daysRented) const {
 inline std::string PriceChildren::getPriceType() const {
   return "children";
 }
+
+inline int PriceChildren::getFrequentRenterPoints(int _daysRented) const {
+  return MIN_RENTER_POINT;
+}
+
 
 #endif //GEN_LABO05_CATEL_MIRKO_MULLER_PRICECHILDREN_H

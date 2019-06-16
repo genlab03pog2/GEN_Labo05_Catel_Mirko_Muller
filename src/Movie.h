@@ -13,6 +13,7 @@ public:
     void setPrice(std::shared_ptr<Price> price);
     std::string getTitle() const;
     double getAmount(int _daysRented) const;
+    int getFrequentRenterPoints(int _daysRented) const;
 
 private:
     std::string _title;
@@ -28,5 +29,7 @@ inline std::string Movie::getPriceCode() const { return price->getPriceType(); }
 inline std::string Movie::getTitle() const { return _title; }
 
 inline double Movie::getAmount(int _daysRented) const { return (*(this->price)).getAmount(_daysRented); }
+
+inline int Movie::getFrequentRenterPoints(int _daysRented) const { return (*(this->price)).getFrequentRenterPoints(_daysRented); }
 
 #endif // MOVIE_H

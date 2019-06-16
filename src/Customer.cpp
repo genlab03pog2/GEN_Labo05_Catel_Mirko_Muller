@@ -23,10 +23,7 @@ string Customer::statement()
       thisAmount = each.getMovie().getAmount(each.getDaysRented());
 
         // add frequent renter points
-        frequentRenterPoints++;
-        // add bonus for a two day new release rental
-        if ( ( each.getMovie().getPriceCode() == "new release" )
-             && each.getDaysRented() > 1 ) frequentRenterPoints++;
+        frequentRenterPoints += each.getMovie().getFrequentRenterPoints(each.getDaysRented());
 
         // show figures for this rental
         result << "\t" << each.getMovie().getTitle() << "\t"
