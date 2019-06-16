@@ -34,9 +34,9 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
             "${gmock_SOURCE_DIR}/include")
 endif()
 
-add_executable(GEN_Labo05_Catel_Mirko_Muller src/main.cpp src/rental.h src/Customer.cpp src/Movie.cpp src/Price.h src/PriceNewRealease.h src/PriceRegular.h src/PriceChildren.h)
+add_executable(GEN_Labo05_Catel_Mirko_Muller src/main.cpp src/rental.h src/movie.h src/Customer.cpp src/Price.h src/PriceNewRealease.h src/PriceRegular.h src/PriceChildren.h)
 
-add_executable(MesTests test/example.cpp src/Customer.cpp src/Movie.cpp)
+add_executable(MesTests test/example.cpp src/Customer.cpp )
 target_link_libraries(MesTests gtest gmock_main)
 
 add_test(NAME example_test COMMAND MesTests)

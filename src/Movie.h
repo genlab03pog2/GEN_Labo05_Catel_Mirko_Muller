@@ -8,13 +8,13 @@
 
 class Movie {
 public:
-    Movie(const std::string& title, std::shared_ptr<Price> price);
-    std::string getTitle() const;
-    std::shared_ptr<Price> getPrice() const;
+  Movie(const std::string& title, std::shared_ptr<Price> price);
+  std::string getTitle() const;
+  std::shared_ptr<Price> getPrice() const;
 
 private:
-    std::string _title;
-    std::shared_ptr<Price> price;
+  std::string _title;
+  std::shared_ptr<Price> price;
 };
 
 inline Movie::Movie(const std::string& title, std::shared_ptr<Price> price) : _title( title ), price( price ){}
