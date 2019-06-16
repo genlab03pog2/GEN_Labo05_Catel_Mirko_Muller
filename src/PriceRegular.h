@@ -5,20 +5,22 @@
 #include "Price.h"
 
 class PriceRegular : public Price {
+protected:
+  const double PRICE_PER_DAY = 1.5;
+  const double DAYS_STEP = 2;
+  const double MIN_AMOUNT = 2;
+
 public:
-    //explicit PriceRegular();
-    double getAmount(int _daysRented) const;
+  double getAmount(int _daysRented) const;
   std::string getPriceType() const ;
   int getFrequentRenterPoints(int _daysRented) const;
 
 };
 
-//PriceRegular::PriceRegular() = default;
-
 inline double PriceRegular::getAmount(int _daysRented) const {
-  double thisAmount = 2;
-  if ( _daysRented > 2 )
-    thisAmount += (_daysRented - 2) * 1.5 ;
+  double thisAmount = MIN_AMOUNT;
+  if ( _daysRented > DAYS_STEP )
+    thisAmount += (_daysRented - DAYS_STEP) * PRICE_PER_DAY ;
   return thisAmount;
 }
 

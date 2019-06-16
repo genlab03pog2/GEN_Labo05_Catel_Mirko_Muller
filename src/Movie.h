@@ -22,10 +22,6 @@ private:
 
 inline Movie::Movie(const std::string& title, std::shared_ptr<Price> price) : _title( title ), price( price ){}
 
-inline std::string Movie::getPriceCode() const { return price->getPriceType(); }
-
-//inline void Movie::setPrice(Price &price) { this->price = price; }
-
 inline std::string Movie::getTitle() const { return _title; }
 
 inline double Movie::getAmount(int _daysRented) const { return (*(this->price)).getAmount(_daysRented); }

@@ -7,17 +7,16 @@
 #include "Price.h"
 
 class PriceNewRelease : public Price {
+protected:
+  const double PRICE_PER_DAY = 3;
 public:
-  // explicit PriceNewRelease();
   double getAmount(int _daysRented) const;
   std::string getPriceType() const;
   int getFrequentRenterPoints(int _daysRented) const;
 };
 
-//PriceNewRelease::PriceNewRelease() =default;
-
 inline double PriceNewRelease::getAmount(int _daysRented) const {
-  return _daysRented * 3;
+  return _daysRented * PRICE_PER_DAY;
 }
 
 inline std::string PriceNewRelease::getPriceType() const {

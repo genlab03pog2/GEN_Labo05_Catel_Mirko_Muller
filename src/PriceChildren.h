@@ -4,20 +4,20 @@
 #include "Price.h"
 
 class PriceChildren : public Price {
+protected:
+  const double PRICE_PER_DAY = 1.5;
+  const double DAYS_STEP = 3;
+  const double MIN_AMOUNT = 1.5;
 public:
-    //explicit PriceChildren();
     double getAmount(int _daysRented) const;
     std::string getPriceType() const;
     int getFrequentRenterPoints(int _daysRented) const;
-
 };
 
-//PriceChildren::PriceChildren() = default;
-
 inline double PriceChildren::getAmount(int _daysRented) const {
-  double thisAmount = 1.5;
-  if (_daysRented > 3 )
-    thisAmount += (_daysRented - 3 ) * 1.5;
+  double thisAmount = MIN_AMOUNT;
+  if (_daysRented > DAYS_STEP )
+    thisAmount += (_daysRented - DAYS_STEP ) * PRICE_PER_DAY;
   return thisAmount;
 }
 
