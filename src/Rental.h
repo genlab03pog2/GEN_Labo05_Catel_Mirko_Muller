@@ -7,7 +7,7 @@ class Rental {
 public:
     Rental( const Movie& movie, int daysRented );
     int getDaysRented() const;
-    const Movie& getMovie() const;
+    virtual const Movie& getMovie() const;
 
 private:
     Movie _movie;
