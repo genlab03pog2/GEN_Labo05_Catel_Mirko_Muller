@@ -14,7 +14,6 @@ public:
 
     std::string getName() const;
     std::string statement();
-
 private:
     std::string _name;
     std::vector< Rental > _rentals;
